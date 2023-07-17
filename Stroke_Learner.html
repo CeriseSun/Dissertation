@@ -3,12 +3,23 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Chinese Character Stroke Order</title>
+    <title>Stroke Learner</title>
     <style>
       body {
         margin: 0;
       }
     </style>
+    <script language="javascript">
+      var video = document.getElementById("video");
+      if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices
+          .getUserMedia({ video: true })
+          .then(function (stream) {
+            video.srcObject = stream;
+            video.play();
+          });
+      }
+    </script>
   </head>
   <body>
     <!--Main title of the page-->
@@ -70,7 +81,6 @@
     <p
       style="
         max-width: fit-content;
-        margin: auto;
         line-height: 1.5;
         padding: 15px;
         display: flex;
@@ -81,8 +91,16 @@
         font-family: cursive;
       "
     >
-      This block contains the first tutorial: understanding different strokes
-      through video, Teachable Machine model will justify the correctness.
+      Taking a look at the following video and try these strokes separately!
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/peBsdl0Kpjc"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
     </p>
     <!--Second tutorial 木-->
     <p
@@ -99,9 +117,134 @@
         font-family: cursive;
       "
     >
-      This block contains the tutorial: writing character "木". Teachable
-      Machine model here.
+      This block contains the tutorial: writing character "木".
+      <a
+        href="https://drive.google.com/file/d/1yxZDnXD0mzC_gicpyuUG858ovTOHPMkD/view?usp=sharing"
+        >Teachable Machine model here.</a
+      >
     </p>
+    <figure
+      class="tutorial2"
+      style="
+        display: flex;
+        padding: 1rem;
+        width: 1300px;
+        background-color: #cecbcb;
+        height: 395px;
+        flex-direction: row;
+        overflow: hidden;
+      "
+    >
+      <div class="tutorial2" style="height: 350px">
+        <!--Stroke representation-->
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/HmDDylunKpM"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen=""
+          style="height: 400px; width: 700px"
+        ></iframe>
+      </div>
+      <section style="overflow: hidden; height: 500px">
+        <aside style="width: 500px; height: 400px">
+          <!--Live camera-->
+          <div style="height: 400px">
+            <video
+              id="video"
+              width="300"
+              height="500"
+              autoplay=""
+              style="width: 470px; height: 448px"
+            ></video>
+            <canvas id="canvas" width="300" height="500"></canvas>
+            <script language="javascript">
+              var canvas = document.getElementById("canvas");
+              var context = canvas.getContext("2d");
+              var video = document.getElementById("video");
+              document
+                .getElementById("snap")
+                .addEventListener("click", function () {
+                  context.drawImage(video, 0, 0, 500, 300);
+                });
+            </script>
+          </div>
+        </aside>
+      </section>
+    </figure>
+    <!--Third tutorial 中-->
+    <p
+      style="
+        display: flex;
+        flex-direction: column;
+        align-content: stretch;
+        justify-content: space-evenly;
+        align-items: stretch;
+        max-block-size: fit-content;
+        margin: auto;
+        line-height: 1.5;
+        padding: 15px;
+        font-family: cursive;
+      "
+    >
+      This block contains the tutorial: writing character "中".
+      <a
+        href="https://drive.google.com/file/d/1G6nO07f3UlE7uka_CWBNgD1JXPDZae4X/view?usp=sharing"
+        >Teachable Machine model here.</a
+      >
+    </p>
+    <figure
+      class="tutorial3"
+      style="
+        display: flex;
+        padding: 1rem;
+        width: 1300px;
+        background-color: #cecbcb;
+        height: 395px;
+        flex-direction: row;
+        overflow: hidden;
+      "
+    >
+      <div class="tutorial3" style="height: 350px">
+        <!--Stroke representation-->
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/EqvPJHp4pA8"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <section style="overflow: hidden; height: 500px">
+        <aside style="width: 500px; height: 400px">
+          <!--Live camera-->
+          <div style="height: 400px">
+            <video
+              id="video"
+              width="300"
+              height="500"
+              autoplay=""
+              style="width: 470px; height: 448px"
+            ></video>
+            <canvas id="canvas" width="300" height="500"></canvas>
+            <script language="javascript">
+              var canvas = document.getElementById("canvas");
+              var context = canvas.getContext("2d");
+              var video = document.getElementById("video");
+              document
+                .getElementById("snap")
+                .addEventListener("click", function () {
+                  context.drawImage(video, 0, 0, 500, 300);
+                });
+            </script>
+          </div>
+        </aside>
+      </section>
+    </figure>
     <!--Footer of the page-->
     <div
       style="
